@@ -1,17 +1,51 @@
+// Cài đặt các thư viện
+// npm install redux redux-first-router react-redux
+
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+import { connectRoutes, NOT_FOUND } from 'redux-first-router';
+import { Provider, connect, useDispatch, useSelector } from 'react-redux';
+import { render } from '@testing-library/react';
+import createSagaMiddleware from 'redux-saga';
+import { takeEvery, call, put } from 'redux-saga/effects';
+import routeMaps from './routes/auth';
+import rootSaga from "./sagas/index"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+import universal from 'react-universal-component';
+import { Button } from 'bootstrap';
+
+import configureStore from "./configureStore"
+
+const store = configureStore()
+
+function* triggerSaga() {
+
+  yield put({type : "HAHA"})
+}
+
+
+const App = () => {
+
+  const dispatch = useDispatch();
+  return (
+    <div>   
+       <button onClick={() => {
+            dispatch({type : "HOME_PAGE"})
+        }}>
+       Action
+     </button>
+  
+    </div>
+
+  )
+}
+
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
-);
+  </Provider>
+  ,
+  document.getElementById("root"))
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+

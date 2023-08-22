@@ -1,0 +1,44 @@
+
+$blueColor : blue;
+$whileColor : white;
+
+
+$bgLogin : url('../../assets/images/bg-login.jpg');
+
+.src_login{
+
+    background: linear-gradient(-135deg,#c850c0,#4158d0);
+    height: 100%;
+    // background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form{
+    color: $whileColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    color: black;
+    margin: 0 30px;
+    .form-group{ // Thay đổi tên class thành custom-form-group
+        padding-bottom: 20px !important;
+    }
+
+    .btn_login {
+        width: 100%;
+    }
+    
+}
+
+
+body {
+    height: 100%;
+}
+
+.root {
+    height: 100%;
+}

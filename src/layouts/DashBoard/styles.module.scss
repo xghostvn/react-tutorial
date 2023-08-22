@@ -1,0 +1,45 @@
+
+
+
+
+#sidebar {
+    background-color: #F4F5F7;
+    width: 220px !important;
+    height: 100%;
+}
+
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    padding-left: 0 !important;
+    width: 100%;
+}
+
+.nav_item {
+    width: 100%;
+}
+
+.active {
+    background-color: #fff;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.nav_link {
+    padding: 10px 35px 10px 35px;
+    display: block;
+    text-decoration: none;
+}
+
+.nav_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.nav_category {
+
+}
+
+

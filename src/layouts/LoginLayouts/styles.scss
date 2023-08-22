@@ -1,0 +1,84 @@
+
+$bannerImage : url("../../assets/images/banner_login.webp");
+body {
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.container {
+    height: 60%;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    width: 50% !important;
+}
+.container-fluid {
+    height: 100%;
+    padding: 0;
+}
+
+.main {
+    width: 80%;
+}
+
+.banner {
+    width: 50%;
+}
+
+.banner img {
+    max-width: 100%;
+    height: 50%;
+}
+
+
+
+.login_form {
+    width: 100% !important;
+}
+
+.forgot {
+    text-align: center;
+ 
+}
+
+.forgot a {
+    color: green !important;
+}
+
+.forgot a:hover,.create_account a {
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.create_account {
+    position: absolute;
+    bottom: 210px;
+    right: 800px;
+    color: green;
+}
+
+@media only screen and (max-width: 1024px) {
+    div.banner {
+        display: none !important;
+    }
+    div.container {
+        width: 90% !important;
+        height: 80%;
+    }
+    div.main form {
+        width: 100% !important;
+    }
+    div.main {
+        width: 100% !important;
+    }
+    div.main h1 {
+        font-size: 20px;
+    }
+}

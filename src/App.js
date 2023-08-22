@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import LoginLayout from './layouts/LoginLayouts';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { SidebarProvider } from './context/Sidebar';
+
+// import dashBoard,{ a } from './layouts/DashBoard';
+
+import DashBoardLayouts from './layouts/DashBoard';
+import { MainLayouts } from './layouts/Main';
+
 
 function App() {
+  // console.log( "a", a, dashBoard);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <SidebarProvider>
+            <MainLayouts></MainLayouts>
+        </SidebarProvider>
   );
 }
 
