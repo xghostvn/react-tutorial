@@ -1,5 +1,5 @@
 
-
+import "./styles.scss"
 
 export const MainLayouts = () => {
     return (
@@ -8,3 +8,6 @@ export const MainLayouts = () => {
         </div>
     )
 }
+
+
+export default MainLayouts

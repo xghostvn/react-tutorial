@@ -11,7 +11,6 @@ import createSagaMiddleware from 'redux-saga';
 import { takeEvery, call, put } from 'redux-saga/effects';
 import routeMaps from './routes/auth';
 import rootSaga from "./sagas/index"
-
 import universal from 'react-universal-component';
 import { Button } from 'bootstrap';
 
@@ -20,24 +19,30 @@ import configureStore from "./configureStore"
 const store = configureStore()
 
 function* triggerSaga() {
-
   yield put({type : "HAHA"})
 }
 
 
-const App = () => {
+const UniversalComponent = universal(props => {
+   return import(`./layouts/${props.currentRoute.component}/index.js`)
+});
 
+
+const RootRoute = connect(state => {
+  let routeType = state.location.type;
+  let routeMap = state.location.routesMap;
+  let currentRoute = routeMap[routeType]
+
+  return {
+    currentRoute
+  }
+})(UniversalComponent)
+
+
+const App = () => {
   const dispatch = useDispatch();
   return (
-    <div>   
-       <button onClick={() => {
-            dispatch({type : "HOME_PAGE"})
-        }}>
-       Action
-     </button>
-  
-    </div>
-
+    <RootRoute></RootRoute>
   )
 }
 

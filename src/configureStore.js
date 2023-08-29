@@ -5,12 +5,6 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import sagas from "./sagas";
 
-
-
-
-
-
-
 const configureStore = () => {
     const sagaMiddleware = createSagaMiddleware();
     const {reducer, middleware} = connectRoutes(routeMaps)
@@ -21,7 +15,7 @@ const configureStore = () => {
     const middlewares = applyMiddleware(...composeMiddleware)   
   
     const store = createStore(rootReducer, middlewares)
-    sagaMiddleware.run(sagas)
+
     return store;
 }
 

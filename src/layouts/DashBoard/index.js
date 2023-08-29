@@ -1,5 +1,6 @@
 
 
+import SideBar from "../SideBar";
 import styles from "./styles.module.scss"
 import "./styles.scss"
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -8,37 +9,25 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const DashBoardLayouts = () => {
     return (
-        <div id={`${styles.sidebar}`} className="d-flex flex-column">
+        <SideBar>
             <div>
-                <a id="website_title">
-                  <i class="fa-solid fa-bars"></i>
-                  <span >Star<span style={{color : "blue", padding : "0"}}>Admin</span></span>
-                </a>
-        
+                <div className="navbar_menu d-flex">
+                        <div className="welcome">
+                            <h1>Good Morning, John Doe</h1>
+                            <h4>Your performance summary this week</h4>
+                        </div>
+                        <div className="ms-auto">
+                            <select className="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                </div>
             </div>
-            <ul className={styles.nav}>
-                <li className={`${styles.nav_item}`}>
-                    <a className={`${styles.nav_link}`}>
-                        <i class="fa-solid fa-table-cells-large"></i>
-                        <span>  DashBoard</span>
-                    </a>
-                </li>
-                <li className={`${styles.nav_item} ${styles.active}`}>
-                    <a className={`${styles.nav_link}`}>
-                        <i class="fa-solid fa-table-cells-large"></i>
-                        <span>  DashBoard</span>
-                    </a>
-                </li>
-
-                <li className={`${styles.nav_item}`}>
-                    <a className={`${styles.nav_link}`}>
-                        <i class="fa-solid fa-table-cells-large"></i>
-                        <span>  DashBoard</span>
-                    </a>
-                </li>
-                
-            </ul>
-        </div>
+        </SideBar>
     )
 }
 

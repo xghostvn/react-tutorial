@@ -1,0 +1,58 @@
+#sidebar_menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav_link {
+  padding: 10px 35px;
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+}
+.navbar_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#sidebar {
+  height: 100%;
+}
+
+.main_layout {
+  background-color: #F4F5F7;
+  height: 100%;
+}
+
+.menu_icon {
+  margin-right: 1rem;
+}
+
+#sidebar_menu {
+  padding-left: 0;
+}
+
+.navbar_categories {
+  padding: 5px 30px;
+}
+
+#website_headerbar {
+  font-size: 20px;
+  padding: 40px 35px;
+}
+
+.active {
+  border-radius: 0 20px 20px 0;
+  background-color: #fff;
+}
+
+.active a {
+  color: blue !important;
+}
+
+.expand_icon {
+  margin-left: 1.5rem;
+  font-size: 10px;
+}

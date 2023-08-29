@@ -1,0 +1,109 @@
+
+
+.src_login {
+    width: 100%;
+    height: 100%;
+}
+
+.new_feed {
+    background-image: url("../../assets/login-bg-4.jpg");
+    position: fixed;
+    right: 500px;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.new_caption {
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    color: white;
+}
+
+.new_caption h4 {
+    font-size: 36px !important;
+}
+.new_caption p {
+    font-size: 18px !important;
+}
+
+
+.right_content {
+    float: right;
+    width: 500px;
+}
+
+.form_title {
+    padding: 60px 60px 0;
+}
+
+.form_title h4 {
+    font-size: 30px;
+}
+
+.form_title small {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.form_register {
+    padding: 25px 60px 0;
+    border: none;
+}
+
+.form_register label {
+    font-weight: 500;
+}
+
+.input_append_icon {
+    background-color: #d3d8df;
+    padding: 6px 12px;
+}
+
+#term {
+    display: none;
+}
+
+.term {
+    position: relative;
+    font-size: 14px;
+}
+
+.term label::before {
+    width: 16px;
+    height: 16px;
+    background-color: #d3d8df;
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+.term label {
+    padding-left: 24px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 760px)  {
+    .new_feed  {
+        display: none;
+    }
+    .right_content {
+        width: auto !important;
+        float: none;
+    }
+
+    .form_register {
+        padding: 25px 20px 0;
+    }
+
+    .form_title {
+        padding: 25px 20px 0;
+    }
+}
